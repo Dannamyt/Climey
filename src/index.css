@@ -4,12 +4,11 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(249, 249, 243, 0.87);
-  background-color: #64635f;
+  background-color: #aeadd1;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: none;
 }
 
 a {
@@ -23,7 +22,7 @@ a:hover {
 
 body {
   margin: 0;
-  background-color: #efece3;
+  background-color: #f7f8fa;
 
   min-width: 320px;
   min-height: 100vh;

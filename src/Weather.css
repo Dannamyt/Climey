@@ -2,7 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+  overflow-x: none;
+  width: 100%;
+  box-sizing: border-box;
 
+
+}
+p{
+ overflow-wrap: break-word;
+}
 .title{
     font-family: "Libre Caslon Text", serif;
 }
@@ -43,9 +52,10 @@ button {
     background-color: rgb(255, 255, 255);
     text-align: left;
     padding: 1rem;
-    max-width: 100%;
-    margin: 0 auto;
-    
+    margin: 1rem auto;
+    /* border-radius: 50px; */
+    width: 100%;
+    white-space: normal;
   }
   .weather-display-info p{
     /* color: black; */
@@ -56,21 +66,21 @@ button {
     transform:scale(0.8);
     transform-origin: center;
     position: relative;
-    top: -13rem;
+    bottom: 13rem;
     left: 10rem;
    
   }
   .name{
     font-size: 1.5rem;
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
+    font-weight: 600;
   }
   .condition{
-    font-weight: 400;
+    font-weight: 500;
     position: relative;
-    top: -17.5rem;
+    bottom: 17.5rem;
     left: 13.7rem;
-    width: 50%;
+    max-width: 100%; 
     
   }
   .country{
@@ -91,4 +101,35 @@ button {
     top: -16.5rem;
     left: 10.5rem;
     color: #85889e;
+}
+.windspeed img,.wind-direction img
+{
+  transform: scale(0.5);
+}
+.humidity img{
+  transform: scale(0.38);
+  
+}
+.humidity,.wind-direction,.windspeed{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  /* gap: -10px; */
+  place-items: centre;
+  /* min-width: 20%; */
+  /* margin: 0 auto; */
+  position: relative;
+  bottom: 22rem;
+  left: 40rem;
+  /* padding: 0; */
+  /* padding: -5rem;
+  margin: -1.5rem; */
+}
+.forecast{
+  display: flex;
+  gap: 25px;
+  word-wrap: break-word;
+}
+.forecast div{
+  width: 100%;
 }

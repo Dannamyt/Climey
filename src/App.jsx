@@ -3,6 +3,7 @@ import "./App.css";
 import "./Weather.css";
 import SearchBar from './SearchBar'
 import WeatherDisplay from './WeatherDisplay'
+import ForeCast from "./ForeCast";
 
 function App() {
 
@@ -10,7 +11,6 @@ function App() {
   const [weatherInfo,setWeatherInfo]=useState(null)
   // const [loading,setLoading]=useState(false)
   const [error,setError]=useState(null)
-const [suggestions, setSuggestions] = useState([])
  
   useEffect(()=>{
     const deBounce = setTimeout(()=>{
@@ -27,8 +27,7 @@ const [suggestions, setSuggestions] = useState([])
   //  setLoading(true)
    setWeatherInfo(null)
    setError(null)
-  setSuggestions({suggestions:weatherInfo?.location.name})
-console.log(setSuggestions)
+// console.log(setSuggestions)
    
    try{
     const encodedCity = encodeURIComponent(city)
@@ -59,6 +58,7 @@ console.log(setSuggestions)
     
 { weatherInfo && <WeatherDisplay weatherInfo={weatherInfo} setWeatherInfo={setWeatherInfo}/>
 }    
+
     </>
   );
 }
