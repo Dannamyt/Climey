@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import "./Weather.css";
+import "./search.css";
 import SearchBar from './SearchBar'
 import WeatherDisplay from './WeatherDisplay'
 import ForeCast from "./ForeCast";
-
+import emoji from './assets/icons8-four-seasons-48.png'
+import videoc from './assets/weather3.mp4'
 function App() {
 
   const [city,setCity]=useState('')
@@ -52,7 +54,9 @@ function App() {
 
   return (
     <div className="app">
-    <h1 className="title">Climey</h1>
+      <video className="vid-bg" src={videoc} autoPlay muted loop></video>
+     <h1 className="title">CLIMEY <span><img src={emoji} alt="" /></span> </h1>
+
 {  !weatherInfo && <SearchBar city={city} setCity={setCity} getWeather={getWeather}/>   
 }    
       <div className="sub-app">

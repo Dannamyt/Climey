@@ -11,7 +11,7 @@ function ForeCast({weatherInfo, setWeatherInfo}){
     return(
     <>
        <div className='container'>
-            <p>Weather Forecast for the Next 6 days</p>
+            <p>Weather Forecast for the Next 6 Days</p>
             <div className='overall'>
                 {
                     weatherInfo?.forecast?.forecastday.slice(1).map((day) =>
@@ -68,7 +68,7 @@ function ForeCast({weatherInfo, setWeatherInfo}){
                                 <p className='value'>{weatherInfo.current.humidity}%</p>
                         </div>
                             <div className="windspeed">
-                                <p>Wind Sped</p>
+                                <p>Wind Speed</p>
                                 <img src={windSpeed} alt="wind-speed"  />
                                 <p className='value'>{weatherInfo.current.wind_kph}k/h</p>
                             </div>
