@@ -7,11 +7,27 @@ import ForeCast from './ForeCast'
 
 function WeatherDisplay({weatherInfo, setWeatherInfo}){
 
+    
+    function getCurrentDay(dateStr){
+        
+        const newDay = new Date(dateStr)
+        
+        const options = {
+            weekday:'long',
+            year:'numeric',
+            month: 'long',
+            day:'numeric',
+            
+        }
+        return newDay.toLocaleDateString('en-us',options)
+    }
+    
     return(
         <>
             <div className="weather-display">
                 <div className="weather-display-info">
                     <div className="name">
+                        <p>{getCurrentDay(weatherInfo.current.last_updated)}</p>
                         <p>Weather Forecast in {weatherInfo.location.name}, <span className="country">{weatherInfo.location.country}</span></p>
                     </div>
                     <div className="temperature">
@@ -40,7 +56,7 @@ function WeatherDisplay({weatherInfo, setWeatherInfo}){
                     </div>
                 </div>
             </div>
-            <h2>weather Forecast for the next 7days</h2>
+            <h2>Weather Forecast for the Next 7days</h2>
             <ForeCast weatherInfo={weatherInfo} setWeatherInfo={setWeatherInfo}/>
             </>
     )

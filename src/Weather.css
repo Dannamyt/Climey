@@ -9,9 +9,14 @@
 
 
 }
-p{
+/* p, .weather-display > div {
+  overflow-wrap: break-word;
+ width: max-content;
+} */
+/* p,div{
  overflow-wrap: break-word;
-}
+ width: max-content;
+} */
 .title{
     font-family: "Libre Caslon Text", serif;
 }
@@ -48,17 +53,17 @@ button {
     outline: 4px auto -webkit-focus-ring-color;
   }
   
-  .weather-display{
+  /* .weather-display{
     background-color: rgb(255, 255, 255);
     text-align: left;
     padding: 1rem;
     margin: 1rem auto;
-    /* border-radius: 50px; */
+     border-radius: 50px; 
     width: 100%;
     white-space: normal;
   }
   .weather-display-info p{
-    /* color: black; */
+     color: black; 
     font-family: "Poppins", sans-serif;
 
   }
@@ -114,22 +119,32 @@ button {
   display: flex;
   justify-items: center;
   align-items: center;
-  /* gap: -10px; */
   place-items: centre;
-  /* min-width: 20%; */
-  /* margin: 0 auto; */
   position: relative;
   bottom: 22rem;
   left: 40rem;
-  /* padding: 0; */
-  /* padding: -5rem;
-  margin: -1.5rem; */
-}
+  
+} */
 .forecast{
   display: flex;
-  gap: 25px;
-  word-wrap: break-word;
-}
-.forecast div{
+  gap: 1rem;
   width: 100%;
+  outline: 1px solid red;
+}
+.forecast > div{
+  background-color: #898787;
+  flex: 1;
+  /* width: 200px; */
+}
+.overall{
+  justify-content: space-between;
+  
+}
+.time{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.per-time img{
+  transform: scale(1.4);
 }
