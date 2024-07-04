@@ -51,15 +51,16 @@ function App() {
   }
 
   return (
-    <>
-    <h1 className="title">Weather App</h1>
-   
-    <SearchBar city={city} setCity={setCity} getWeather={getWeather}/>   
-    
-{ weatherInfo && <WeatherDisplay weatherInfo={weatherInfo} setWeatherInfo={setWeatherInfo}/>
+    <div className="app">
+    <h1 className="title">Climey</h1>
+{  !weatherInfo && <SearchBar city={city} setCity={setCity} getWeather={getWeather}/>   
 }    
-
-    </>
+      <div className="sub-app">
+        { weatherInfo && <WeatherDisplay weatherInfo={weatherInfo} setWeatherInfo={setWeatherInfo}/>
+        }    
+        {    weatherInfo && <ForeCast weatherInfo={weatherInfo} setWeatherInfo={setWeatherInfo}/>
+        }
+      </div> </div>
   );
 }
 
